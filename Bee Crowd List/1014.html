@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var input = `500
+35.0`;
+        console.log(typeof(input));
+        var lines = input.split('\n');
+        console.log(typeof(lines));
+        console.log(lines);
+        let distance = lines[0] ;
+        let reperesenting  = lines[1];
+        let km = distance/reperesenting;
+        console.log(`${km.toFixed(3)} km/l`);
+    </script>
+</body>
+</html>

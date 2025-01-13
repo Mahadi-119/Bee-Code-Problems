@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+        var input = `140153`;
+        var lines = input.split('\n');
+        let inputSeconds = lines[0];
+        function genarateProgram (time) {
+          let hour = Math.floor(time/3600);
+          let totalMinutes = Math.floor(time - (hour * 3600));
+          let minutes = Math.floor(totalMinutes / 60);
+          let seconds = Math.floor(totalMinutes - (minutes * 60)); 
+          console.log(`${hour}:${minutes}:${seconds}`)
+          return 0;
+        }
+        genarateProgram(inputSeconds);
+
+        
+  </script>
+</body>
+</html>

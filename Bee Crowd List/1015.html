@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var input = `1.0 7.0
+5.0 9.0`;
+        console.log(typeof(input));
+        console.log(input);
+        var lines = input.split('\n');
+        console.log(typeof(lines));
+        console.log(lines);
+        let [x1, y1] = lines[0].split(' ').map(Number);
+        let [x2, y2] = lines[1].split(' ').map(Number);
+        console.log(typeof(x1));
+        console.log(x1);
+        // Math.sqrt ata Root over ar kaj kore;
+        // Math.pow atar maddome hole squre kora jay;
+        let distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        console.log(distance.toFixed(4));
+    </script>   
+</body>
+</html>

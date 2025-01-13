@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var input = `3.0 4.0 5.2`;
+      console.log(typeof(input));
+      var lines = input.split('\n');
+      console.log(typeof(lines));
+      console.log(lines);
+      let [A, B , C] = lines[0].split(' ').map(Number);// without Map String;
+      console.log(typeof(A));
+      let pi = 3.14159;
+      let tringle = (A * C) / 2;
+      let circle = pi * Math.pow(C,2);
+      let trapezium = ((A + B) * C) / 2;
+      let squar = B * B;
+      let rectangle = A * B;
+      console.log (`TRIANGULO: ${tringle.toFixed(3)}`);
+      console.log (`CIRCULO: ${circle.toFixed(3)}`);
+      console.log (`TRAPEZIO: ${trapezium.toFixed(3)}`);
+      console.log (`QUADRADO: ${squar.toFixed(3)} `);
+      console.log (`RETANGULO: ${rectangle.toFixed(3)}`);
+      	
+	
+TRIANGULO: 7.800
+CIRCULO: 84.949
+TRAPEZIO: 18.200
+QUADRADO: 16.000
+RETANGULO: 12.000
+    </script>
+</body>
+</html>

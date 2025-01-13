@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // PROBLEM 1005,1006;
+        var input = `5.0
+6.0
+7.0`;
+console.log(typeof(input));
+        var lines = input.split('\n');
+        console.log(typeof(lines));
+        console.log(lines);
+        let [parseA, parseB, parseC] = lines ;
+        let A = 2;
+        let B = 3;
+        let C = 5;
+        let media = (parseA * A + parseB * B + parseC * C) / (A+B+C);
+        console.log(`MEDIA = ${media.toFixed(1)}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <script>
+    var input = `576.73`;
+    var lines = input.split('\n');
+
+    let myInput= lines[0];
+    const totalCoins = [100, 50, 20, 10, 5, 2, 1, 0.50, 0.25, 0.10, 0.05 , 0.01];
+
+    const deviderFun = (myInput, money)=> Math.trunc(myInput/money);
+    const vagshasFun = (myInput, money)=> (myInput%money).toFixed(2);
+
+    function calculaterFun (myInput, moneys){
+      const listAll = moneys.map(money => {
+        const storeDevider = deviderFun(myInput, money);
+        myInput = vagshasFun (myInput, money);
+        return{
+          money: money ,
+          storeDevider: storeDevider,
+          }
+      })
+      return listAll;
+    }
+
+    function showResult (){
+      let storeCalculateFun = calculaterFun(myInput, totalCoins);
+      let taka = storeCalculateFun.slice(0,6);
+      let poisha = storeCalculateFun.slice(6,12);
+
+      console.log('NOTAS:');
+      taka.forEach (showTaka => console.log(`${showTaka.storeDevider} nota(s) de R$ ${showTaka.money.toFixed(2)}`));
+
+      console.log('MOEDAS:');
+      poisha.forEach(showPoisha=>console.log(`${showPoisha.storeDevider} moeda(s) de R$ ${showPoisha.money.toFixed(2)}`));
+    }
+    showResult()
+
+ </script>
+</body>
+</html>

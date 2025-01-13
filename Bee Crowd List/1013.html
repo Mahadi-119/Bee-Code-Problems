@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+     var input = `7 1444 106`;
+      console.log(typeof(input));
+      console.log(input);
+      var lines = input.split('\n');
+      console.log(typeof(lines));
+      console.log(lines);
+      let valu = lines[0].split(' ');
+    //   console.log(typeof( valu));
+    //   console.log(valu)
+      let a = Number(valu[0]);
+      let b = Number(valu[1]);
+      let c = Number(valu[2]);
+      let maiorAB = (a+b+Math.abs(a-b))/2;
+      let maiorABC = (maiorAB + c + Math.abs(maiorAB-c))/2;
+    //   console.log(maiorAB);
+      console.log(`${maiorABC} eh o maior`);
+  </script>
+</body>
+</html>

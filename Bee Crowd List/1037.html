@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var input = `25.01`;
+      var lines = input.split("\n");
+    //   const valus = lines[0].split(" ");
+
+      let valor = parseFloat(lines[0]);
+      function calculateFlotingNum(valor) {
+        if (valor >= 0 && valor <= 25) {
+          return "Intervalo [0,25]"
+        } else if (valor > 25 && valor <= 50) {
+          return "Intervalo (25,50]"
+        } else if ( valor > 50 && valor <= 75) {
+          return "Intervalo (50,75]"
+        } else if ( valor > 75 && valor <= 100) {
+          return "Intervalo (75,100]"
+        } else {
+          return "Fora de intervalo"
+        }
+      }
+      const store = calculateFlotingNum(valor);
+      console.log(store);
+    </script>
+  </body>
+</html>

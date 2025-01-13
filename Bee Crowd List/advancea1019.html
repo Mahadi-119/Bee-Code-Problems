@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var input = `556`;
+    var lines = input.split('\n');
+    let inputSeconds = lines[0];
+    function equalati (time, jone){
+      let timeObj = { 
+        hour: 3600 ,
+        minute: 60,
+        secounds:1,
+      };
+      let timeDevider = Math.floor(time / timeObj[jone]);
+      let timeParsentase = time % timeObj[jone];
+      return {timeDevider, timeParsentase};
+    }
+    function showConsole(time){
+      const hours = equalati(time, 'hour');
+      const minutes = equalati (hours.timeParsentase, "minute");
+      console.log(typeof(minutes));
+      console.log(hours);
+      console.log(minutes);
+      return `${hours.timeDevider}:${minutes.timeDevider}:${minutes.timeParsentase}`
+    }
+    console.log(showConsole(inputSeconds));
+  </script>
+</body>
+</html>

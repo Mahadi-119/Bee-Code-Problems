@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      var input = `10.0 20.1 5.1`;
+      var lines = input.split("\n");
+      const valus = lines[0].split(" ");
+
+      function calculateFrmla(a, b, c) {
+        let cal = b * b - 4 * a * c;
+        if (cal < 0 || a == 0) {
+          return `Impossivel calcular`;
+        } else {
+          let R1 = (-b + Math.sqrt(cal)) / (2 * a);
+          let R2 = (-b - Math.sqrt(cal)) / (2 * a);
+          return `R1 = ${R1.toFixed(5)}\nR2 = ${R2.toFixed(5)}`;
+        }
+      }
+      console.log(calculateFrmla(...valus));
+    </script>
+  </body>
+</html>

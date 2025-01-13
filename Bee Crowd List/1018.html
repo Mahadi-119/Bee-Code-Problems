@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>        
+        var input = `765`;
+        console.log(typeof(input));
+        console.log(input);
+         var lines = input.split('\n');
+         console.log(typeof(lines));
+         console.log(lines);
+          let note = lines[0];     
+            console.log(note);
+            console.log( typeof(note));
+            let vagshah;
+            let note100 = Math.floor(note / 100);
+            console.log(`${note100} nota(s) de R$ 100,00`)
+            vagshah = note % 100;
+            let note50 = Math.floor(vagshah / 50);
+            console.log(`${note50} nota(s) de R$  50,00`);
+            vagshah = vagshah % 50;
+           
+            let note20 = Math.floor(vagshah / 20);
+            console.log(`${note20} nota(s) de R$  20,00`);
+            vagshah = vagshah % 20;
+        //    console.log(vagshah)
+           let note10 =Math.floor( vagshah / 10);
+           console.log(`${note10} nota(s) de R$  10,00`)
+           let note5 = Math.floor(vagshah / 5);
+           console.log(`${note5} nota(s) de R$  5,00`);
+           vagshah =  vagshah % 5;
+           let note2 = Math.floor(vagshah / 2);
+           console.log(`${note2} nota(s) de R$  2,00`);
+           let note1 = Math.floor(vagshah / 1);
+           console.log(`${note1} nota(s) de R$  1,00`);
+
+
+    </script>
+</body>
+</html>

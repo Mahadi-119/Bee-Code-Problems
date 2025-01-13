@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <SCript>
+        var input = `765`;
+        var lines = input.split('\n');
+
+        let totalValour = lines[0];
+        let totalNote = [100, 50, 20, 10, 5, 2, 1];
+        function noteQuntati(valu, note){
+            let quntati_2 = Math.floor(valu /note);
+            return quntati_2;  
+        }
+        function allNote (valu, notes) {
+            let funtionalete = notes.map(note => {
+                let quntati_1 = noteQuntati(valu, note);
+                valu = valu - (quntati_1 * note);
+                return {note, quntati_1};
+            })
+            return funtionalete;
+        }
+       
+        function showValu (valu, notes){
+            let equalValu = allNote(valu, notes);
+
+            console.log(valu);
+            equalValu.forEach(({quntati_1, note}) => {
+                console.log (`${quntati_1} nota(s) de R$ ${note},00`)
+            });
+        }
+        showValu( totalValour, totalNote);
+
+    </SCript>
+</body>
+</html>

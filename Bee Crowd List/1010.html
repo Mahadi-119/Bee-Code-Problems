@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <SCript>
+        
+        var input = `12 1 5.30
+16 2 5.10`;
+    console.log(typeof(input));
+    var lines = input.split('\n');
+    console.log(typeof(lines));
+    console.log(lines);
+    let spach = ' ';
+    let [item1, contati1, price1]  = lines[0].split(spach);
+    let [item2, contati2, price2]  = lines[1].split(spach);
+    // console.log(typeof(item1))
+    // console.log(item1,contati1);
+    let total  = (contati1 * price1)  + (contati2 * price2);
+    console.log(typeof(total));
+    console.log(`VALOR A PAGAR: R$ ${total.toFixed(2)}`)
+    </SCript>
+</body>
+</html>
